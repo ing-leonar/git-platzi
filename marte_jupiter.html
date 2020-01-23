@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Peso en Marte o Jupiter</title>
+
+</head>
+
+<body>
+    <h1>Tu peso en otro planeta</h1>
+    <p>Tu peso es diferente en otro planeta debido a la variacion de la gravedad</p>
+<script>
+var usuario = parseInt(prompt("Cual es tu Peso")); 
+var planeta=parseInt(prompt("Elige! 1 Es Marte -- 2 Es Jupiter"));
+var peso=parseInt(usuario);   
+var g_tierra=9.8;
+var g_marte=3.7;
+var g_jupiter=24.8;
+var n_planmeta;
+var peso_final;
+if(planeta==1){
+    peso_final=peso * g_marte / g_tierra;
+    peso_final=parseInt(peso_final);
+    n_planmeta="Marte";
+}
+else if(planeta==2)
+ {
+peso_final=peso * g_jupiter / g_tierra;
+peso_final=parseInt(peso_final);
+    n_planmeta="Jupiter";
+}
+else
+{
+    peso_final=100000000;
+}
+peso_final=parseInt(peso_final);
+
+document.write("Tu peso en " + n_planmeta + " es de<strong>" + peso_final + " kl</strong>");
+</script>
+
+</body>
+</html>
